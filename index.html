@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penny Leong | Biomedical Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="container">
+    <h1>Penny Leong</h1>
+    <p>Biomedical Engineering Student at UWaterloo | Surgical Robotics & Design</p>
+    <div class="links">
+      <a href="https://github.com/pennyleong" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/penny-leong-01005a384/" target="_blank">LinkedIn</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-column">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h3>CAD & Design</h3>
+          <ul>
+            <li>SOLIDWORKS</li>
+            <li>AutoCAD</li>
+            <li>Canva</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h3>Engineering</h3>
+          <ul>
+            <li>Mechanical Design</li>
+            <li>Prototyping</li>
+            <li>Systems Thinking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <button class="project-card" onclick="openDetail('puzzle')">
+          <h3>Mechanical Flower & Linkage System</h3>
+          <p>Functional gear-driven mechanism modeled in CAD.</p>
+          <p class="tags">SOLIDWORKS • Prototyping</p>
+          <span class="open-hint">Click to view →</span>
+        </button>
+
+        <button class="project-card" onclick="openDetail('catan')">
+          <h3>Inclusive Catan Redesign</h3>
+          <p>Accessibility project for users with tremors.</p>
+          <p class="tags">3D Printing • Ergonomics</p>
+          <span class="open-hint">Click to view →</span>
+        </button>
+
+        <button class="project-card" onclick="openDetail('cad-vehicle')">
+          <h3>Constrained Vehicle Assembly</h3>
+          <p>Complex multi-part assembly with motion constraints.</p>
+          <p class="tags">SOLIDWORKS • Kinematics</p>
+          <span class="open-hint">Click to view →</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="design-teams">
+      <h2>Design Teams</h2>
+      <div class="projects-grid">
+        <button class="project-card" onclick="openDetail('biomechatronics')">
+          <h3>BioMechatronics Design Team</h3>
+          <p>Exoskeleton Digital Twin & PID Control Logic.</p>
+          <p class="tags">ROS • C++ • URDF</p>
+          <span class="open-hint">Click to view →</span>
+        </button>
+
+        <button class="project-card" onclick="openDetail('bmesociety')">
+          <h3>BME Society – Mechanical Team</h3>
+          <p>Smart Knee Brace for True North Competition.</p>
+          <p class="tags">FDA Standards • SOLIDWORKS</p>
+          <span class="open-hint">Click to view →</span>
+        </button>
+      </div>
+
+      <div id="project-detail" class="detail hidden">
+        <div id="detail-video-container" class="detail-gallery"></div>
+        <div id="detail-image-container" class="detail-gallery"></div>
+        <div class="detail-header">
+          <h3 id="detail-title"></h3>
+          <button onclick="closeDetail()" class="close-btn">✕</button>
+        </div>
+        <p id="detail-summary"></p>
+        
+        <div id="detail-image-container" class="detail-gallery"></div>
+
+        <div class="detail-cols">
+          <div>
+            <h4>Key Contributions</h4>
+            <ul id="detail-bullets"></ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p id="detail-tools" class="detail-tools"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:p3leong@uwaterloo.ca">p3leong@uwaterloo.ca</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
